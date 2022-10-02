@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-openSans bg-bgBlue;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px #0d1828 inset;
+    -webkit-text-fill-color: white;
+  }
+
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px #0d1828 inset;
+    -webkit-text-fill-color: white;
+  }
+}
+
+@layer components {
+  .titleBlue {
+    @apply text-xl font-bold text-titleBlue mb-6;
+  }
+  .titleWhite {
+    @apply text-2xl font-bold text-txtWhite tracking-wider mb-2;
+  }
+  .titleHero {
+    @apply text-5xl md:text-6xl font-bold tracking-wider;
+  }
+  .navList {
+    @apply cursor-pointer hover:text-txtWhite;
+  }
+  .navListMenu {
+    @apply text-sm py-2 px-4 hover:bg-gray-200/10 hover:underline block;
+  }
+}
