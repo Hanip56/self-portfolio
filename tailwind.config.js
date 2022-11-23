@@ -14,6 +14,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         autoFill: "repeat(auto-fit, minmax(5rem, 11rem) )",
+        autoLogoMobile: "repeat(auto-fit, minmax(4rem, 4rem) )",
       },
     },
   },

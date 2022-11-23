@@ -1,0 +1,12 @@
+export { default as About } from "./About";
+export { default as AlternateProjects } from "./AlternateProjects";
+export { default as Contacts } from "./Contacts";
+export { default as Expertise } from "./Expertise";
+export { default as ExpertiseCard } from "./ExpertiseCard";
+export { default as Footer } from "./Footer";
+export { default as Home } from "./Home";
+export { default as ModalProject } from "./ModalProject";
+export { default as Navbar } from "./Navbar";
+export { default as Projects } from "./Projects";
+export { default as Skills } from "./Skills";
+export { default as TitleReveal } from "./TitleReveal";

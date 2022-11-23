@@ -10,6 +10,7 @@ export const revealVariants = {
       ease: "easeOut",
       y: { duration: 0.7 },
       opacity: { duration: 0.4 },
+      delay: 0.2,
     },
   },
 };

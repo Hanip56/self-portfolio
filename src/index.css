@@ -28,7 +28,7 @@
     @apply text-xl font-bold text-titleBlue mb-6;
   }
   .titleWhite {
-    @apply text-2xl font-bold text-txtWhite tracking-wider mb-2;
+    @apply text-2xl md:text-4xl font-bold text-txtWhite tracking-wider mb-2;
   }
   .titleHero {
     @apply text-5xl md:text-6xl font-bold tracking-wider;

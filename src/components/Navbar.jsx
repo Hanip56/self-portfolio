@@ -23,16 +23,16 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold">H</h1>
         <ul className="hidden md:flex text-[.75rem] gap-x-12 font-montserrat">
           <li className="navList">
-            <a href="#About">About</a>
+            <a href="/#About">About</a>
           </li>
           <li className="navList">
-            <a href="#Skills">Skills</a>
+            <a href="/#Skills">Skills</a>
           </li>
           <li className="navList">
-            <a href="#Projects">Projects</a>
+            <a href="/#Projects">Projects</a>
           </li>
           <li className="navList">
-            <a href="#Contacts">Contacts</a>
+            <a href="/#Contacts">Contacts</a>
           </li>
         </ul>
         <div></div>
