@@ -9,8 +9,8 @@ const Expertise = () => {
 
   return (
     <div
-      id="Skills"
-      className="h-screen flex flex-col justify-center items-center text-center "
+      id="Expertise"
+      className="min-h-screen flex flex-col justify-center items-center text-center my-8"
     >
       <motion.div
         variants={revealVariants}
@@ -20,12 +20,9 @@ const Expertise = () => {
         className="mb-20"
       >
         <h2 className="titleWhite">My Expertise</h2>
-        <p className="text-gray-500 tracking-wider">
-          Few technology that i use
-        </p>
       </motion.div>
 
-      <div className="w-[90vw] md:w-[60rem] flex flex-col gap-10">
+      <div className="w-[90vw] lg:w-[60rem] flex flex-col gap-10">
         {expertiseList?.map((expertise, idx) => (
           <ExpertiseCard
             key={idx}

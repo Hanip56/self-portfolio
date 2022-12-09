@@ -1,13 +1,37 @@
 import React, { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useOutsideAlerter from "../utils/clickOutside";
+import { useLocation, useNavigate } from "react-router-dom";
+import { selfLogo } from "../assets/images";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const barRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleClose = () => {
-    setShowMenu(false);
+  console.log(location);
+
+  const handleNavigate = (route, offset) => {
+    if (location.pathname === "/") {
+      const section = document.getElementById(route).offsetTop - offset;
+      // section?.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scroll({ top: section, behavior: "smooth" });
+    } else {
+      navigate("/");
+
+      setTimeout(() => {
+        const section = document.getElementById(route).offsetTop - 58;
+        // section?.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scroll({ top: section, behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleClose = (route, offset) => {
+    console.log({ showMenu });
+    setShowMenu((prev) => false);
+    handleNavigate(route, offset);
   };
 
   useOutsideAlerter(barRef, setShowMenu);
@@ -18,25 +42,43 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="z-30 fixed w-full h-16 top-0 bg-[#0d1828] py-6 px-12 flex justify-between text-gray-400 trackingWider"
+        className="z-30 fixed w-screen h-16 top-0 bg-[#0d1828] py-6 px-6 md:px-14 flex justify-between text-gray-400 trackingWider"
       >
-        <h1 className="text-2xl font-bold">H</h1>
-        <ul className="hidden md:flex text-[.75rem] gap-x-12 font-montserrat">
-          <li className="navList">
-            <a href="/#About">About</a>
+        <div className="w-7 h-7 cursor-pointer" onClick={() => navigate("/")}>
+          <img
+            src={selfLogo}
+            alt="self-logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <ul className="hidden md:flex text-sm gap-x-12 font-semibold">
+          <li className="navList" onClick={() => handleNavigate("About", 28)}>
+            About
           </li>
-          <li className="navList">
-            <a href="/#Skills">Skills</a>
+          <li
+            className="navList"
+            onClick={() => handleNavigate("Expertise", 70)}
+          >
+            Expertise
           </li>
-          <li className="navList">
-            <a href="/#Projects">Projects</a>
+          <li
+            className="navList"
+            onClick={() => handleNavigate("Projects", 120)}
+          >
+            Projects
           </li>
-          <li className="navList">
-            <a href="/#Contacts">Contacts</a>
+          <li
+            className="navList"
+            onClick={() => handleNavigate("Contacts", 100)}
+          >
+            Contacts
           </li>
         </ul>
         <div></div>
-        <div className="relative w-6 h-6 block md:hidden cursor-pointer">
+        <div
+          onClick={() => setShowMenu((state) => !state)}
+          className="relative w-6 h-6 block md:hidden cursor-pointer"
+        >
           <svg
             x="0px"
             y="0px"
@@ -45,7 +87,6 @@ const Navbar = () => {
             viewBox="0 0 63.1 39.4"
             enableBackground="new 0 0 63.1 39.4"
             className="w-full h-full"
-            onClick={() => setShowMenu((prev) => !prev)}
           >
             <line
               fill="none"
@@ -85,44 +126,32 @@ const Navbar = () => {
                 initial={{ opacity: 0, scale: 0, originX: 1, originY: -0.1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
-                className="absolute w-40 h-40 bg-[#0e334f] z-[60] -bottom-[10.5rem] -left-[8.5rem] rounded-md"
+                className="absolute w-40 h-40 z-[60] -bottom-[10.2rem] -left-[8.5rem] bg-[#0e334f] rounded-md"
               >
                 <ul className="py-2">
-                  <li>
-                    <a
-                      className="navListMenu"
-                      href="#About"
-                      onClick={handleClose}
-                    >
-                      About
-                    </a>
+                  <li
+                    className="navListMenu"
+                    onClick={() => handleClose("About", 28)}
+                  >
+                    About
                   </li>
-                  <li>
-                    <a
-                      className="navListMenu"
-                      href="#Skills"
-                      onClick={handleClose}
-                    >
-                      Skills
-                    </a>
+                  <li
+                    className="navListMenu"
+                    onClick={() => handleClose("Expertise", 70)}
+                  >
+                    Skills
                   </li>
-                  <li>
-                    <a
-                      className="navListMenu"
-                      href="#Projects"
-                      onClick={handleClose}
-                    >
-                      Projects
-                    </a>
+                  <li
+                    className="navListMenu"
+                    onClick={() => handleClose("Projects", 120)}
+                  >
+                    Projects
                   </li>
-                  <li>
-                    <a
-                      className="navListMenu"
-                      href="#Contacts"
-                      onClick={handleClose}
-                    >
-                      Contacts
-                    </a>
+                  <li
+                    className="navListMenu"
+                    onClick={() => handleClose("Contacts", 100)}
+                  >
+                    Contacts
                   </li>
                 </ul>
               </motion.div>

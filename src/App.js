@@ -2,17 +2,26 @@ import { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import ModalProject from "./components/ModalProject";
 import Navbar from "./components/Navbar";
+import { useStateContext } from "./contexts/ContextProvider";
 import DetailProject from "./pages/DetailProject";
 import HomeContainer from "./pages/HomeContainer";
+import NotFound from "./pages/NotFound";
 import { useDisableBodyScroll } from "./utils/preventScroll";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [currentModalInfo, setCurrentModalInfo] = useState({});
+  const { isViewed, setIsViewed } = useStateContext();
 
   useDisableBodyScroll(showModal);
 
   const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    setIsViewed((prev) => prev + 1);
+  }, []);
+
+  console.log({ isViewed });
 
   useEffect(() => {
     // if not a hash link, scroll to top
@@ -45,13 +54,12 @@ function App() {
         />
       )}
 
-      <div className="bg-bgBlue">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomeContainer />} />
-          <Route path="/project/:projectId" element={<DetailProject />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomeContainer />} />
+        <Route path="/project/:projectId" element={<DetailProject />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }

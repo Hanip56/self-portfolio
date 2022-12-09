@@ -35,7 +35,7 @@ const ExpertiseCard = ({
         } border-t-4 border-t-red-500 md:border-t-transparent md:border-l-8 border-l-red-500 flex-1 border-b border-b-gray-500 gap-2`}
       >
         {/* top */}
-        <div className="flex flex-col md:flex-row min-h-40 py-4">
+        <div className="flex flex-col md:flex-row min-h-40 py-4 justify-between">
           <p className="text-md md:text-lg text-center md:text-start px-6 py-4 text-gray-400">
             {description}
           </p>
@@ -61,18 +61,22 @@ const ExpertiseCard = ({
             animate={{
               opacity: 1,
             }}
-            className="grid grid-cols-autoLogoMobile gap-4 items-center my-8 justify-around md:h-40"
           >
-            {tech?.map((el, idx) => (
-              <div className="flex flex-col justify-center items-center gap-3 flex-1 h-20 w-20">
-                <img
-                  src={el.icon}
-                  alt={el.name}
-                  className="w-10 h-10 object-contain"
-                />
-                <p className="text-gray-400">{el.name}</p>
-              </div>
-            ))}
+            <p className="text-center text-sm md:text-start md:ml-6 text-gray-400">
+              Some Technology that i use :
+            </p>
+            <div className="grid grid-cols-autoLogoMobile gap-4 items-center my-8 justify-around md:my-12">
+              {tech?.map((el, idx) => (
+                <div className="flex flex-col justify-center items-center gap-3 flex-1 h-20 w-20">
+                  <img
+                    src={el.icon}
+                    alt={el.name}
+                    className="w-10 h-10 object-contain"
+                  />
+                  <p className="text-gray-400">{el.name}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         )}
       </div>

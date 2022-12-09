@@ -27,7 +27,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="text-gray-400 text-xs md:text-sm text-center mx-auto mb-4">
-        © 2022 Hanip Al Hapidz. All Rights Reserved.
+        © 2022, Built and designed by Hanip Al Hapidz
       </p>
     </motion.div>
   );

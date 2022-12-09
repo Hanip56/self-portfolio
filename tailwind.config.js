@@ -11,6 +11,7 @@ module.exports = {
         bgBlue: "#0d1828",
         titleBlue: "#639dcf",
         txtWhite: "#fffefc",
+        redPort: "#c25051",
       },
       gridTemplateColumns: {
         autoFill: "repeat(auto-fit, minmax(5rem, 11rem) )",

@@ -36,7 +36,7 @@ const Contacts = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="relative h-full w-[80vw] md:w-[45rem] flex flex-col md:flex-row gap-x-12 gap-y-12 bg-black/20 -translate-x-[50%]"
+        className="relative h-full w-[90vw] md:w-[45rem] flex flex-col md:flex-row gap-x-12 gap-y-12 bg-black/20 -translate-x-[50%]"
       >
         <motion.div
           initial={{ opacity: 0, x: -100 }}

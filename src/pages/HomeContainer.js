@@ -7,6 +7,7 @@ import {
   Expertise,
   Footer,
   Home,
+  Projects,
 } from "../components";
 
 const HomeContainer = () => {
@@ -16,6 +17,7 @@ const HomeContainer = () => {
       <About />
       <Expertise />
       <AlternateProjects />
+      {/* <Projects /> */}
       <Contacts />
       <Footer />
     </>

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="About"
-      className="h-screen w-[90vw] md:w-[60rem] mx-auto flex flex-col md:flex-row justify-center items-center gap-x-12"
+      className="h-screen mx-auto flex flex-col md:flex-row justify-center items-center gap-x-12"
     >
       <motion.div
         initial={{ marginRight: 150, opacity: 0 }}
@@ -30,15 +30,18 @@ const About = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="basis-[50%] text-center md:text-start"
+        className="basis-[50%] text-justify md:text-start"
       >
         <h2 className="titleBlue">About Me</h2>
-        <p className="text-gray-400 text-base max-w-full md:max-w-xs leading-6 md:leading-8 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
-          similique assumenda eveniet tempore temporibus. Cumque quae blanditiis
-          iste neque cupiditate eum! Eligendi, inventore suscipit?Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Aliquam eveniet velit
-          magnam deserunt quis harum?
+        <p className="text-gray-400 max-w-xs text-sm md:text-base   sm:max-w-md md:max-w-xs  leading-6">
+          My name is Hanip Al Hapidz, I'm a Front End Developer from bandung,
+          Indonesia. <br /> <br />{" "}
+          <span>
+            I enjoy learn many technologies and make a lot of different things,
+            from graphic design, motion graphic, Web Design, into creating fully
+            functional App. Event though, My main focus these days is at Front
+            End Development.
+          </span>
         </p>
       </motion.div>
     </div>

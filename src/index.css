@@ -21,6 +21,11 @@
     -webkit-box-shadow: 0 0 0 50px #0d1828 inset;
     -webkit-text-fill-color: white;
   }
+
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 @layer components {
@@ -38,5 +43,16 @@
   }
   .navListMenu {
     @apply text-sm py-2 px-4 hover:bg-gray-200/10 hover:underline block;
+  }
+
+  .shadowEffect {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5046393557422969) 0%,
+      rgba(255, 255, 255, 0) 16%,
+      rgba(255, 255, 255, 0) 75%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
   }
 }

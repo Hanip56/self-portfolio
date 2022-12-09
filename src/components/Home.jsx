@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className="relative h-screen w-full flex flex-col gap-y-4 justify-center items-center text-txtWhite text-center"
+      className="relative min-h-screen mx-auto flex flex-col gap-y-4 md:gap-y-6 justify-center items-center text-txtWhite text-center"
     >
       <motion.p
         initial={{ scale: 0 }}
@@ -40,9 +40,11 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="text-sm sm:text-md lg:text-lg mt-6"
+        className=""
       >
-        A WEB DEVELOPER
+        <p className="text-sm sm:text-md lg:text-lg tracking-widest font-extralight leading-6 md:leading-8 uppercase">
+          Software Engineer <br /> & Designer
+        </p>
       </motion.p>
 
       {!isScrolled && (
