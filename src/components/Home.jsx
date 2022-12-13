@@ -43,7 +43,7 @@ const Home = () => {
         className=""
       >
         <p className="text-sm sm:text-md lg:text-lg tracking-widest font-extralight leading-6 md:leading-8 uppercase">
-          Software Engineer <br /> & Designer
+          Front End Developer <br /> & Designer
         </p>
       </motion.p>
 
