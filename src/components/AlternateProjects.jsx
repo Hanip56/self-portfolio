@@ -180,15 +180,21 @@ const AlternateProjects = () => {
               </motion.div>
             ))}
             {/* more button */}
-            <motion.button
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ delay: 0.4 }}
-              viewport={{ once: true }}
-              className="ml-[17px] md:mx-auto text-white border border-gray-500 block py-2 px-4 hover:bg-white/20"
+            <a
+              href="https://github.com/Hanip56"
+              rel="noreferrer"
+              target="_blank"
             >
-              More
-            </motion.button>
+              <motion.button
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true }}
+                className="ml-[17px] md:mx-auto text-white border border-gray-500 block py-2 px-4 hover:bg-white/20"
+              >
+                More
+              </motion.button>
+            </a>
           </motion.div>
         </motion.div>
 

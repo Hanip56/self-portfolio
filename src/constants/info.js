@@ -51,7 +51,7 @@ export const projectInfo = [
     moreDescription:
       "Instation basically is an instagram you can posting, editing, deleting your post. Like other post, follow other account, explore other post, and even chatting with other account.",
     code: "https://github.com/Hanip56/instation",
-    live: "https://instation.herokuapp.com",
+    live: "https://instation-2pknrt6ob-hanip56.vercel.app/",
     type: "Full Stack App",
     imageScreenshoot: [
       instationss1,
