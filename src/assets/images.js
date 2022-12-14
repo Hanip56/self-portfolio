@@ -13,6 +13,11 @@ export { default as instationss4 } from "./images/projects/instation/4.jpg";
 export { default as instationss5 } from "./images/projects/instation/5.jpg";
 export { default as instationss6 } from "./images/projects/instation/6.jpg";
 
+export { default as warungpediass1 } from "./images/projects/warungpedia/1.jpg";
+export { default as warungpediass2 } from "./images/projects/warungpedia/2.jpg";
+export { default as warungpediass3 } from "./images/projects/warungpedia/3.jpg";
+export { default as warungpediass4 } from "./images/projects/warungpedia/4.jpg";
+
 // graphic design
 export { default as MustholahCover1a } from "./images/graphicDesign/cover_1_1.jpg";
 export { default as MustholahCover1b } from "./images/graphicDesign/cover_1_2.jpg";

@@ -24,6 +24,10 @@ import {
   quizlamUi1,
   quizlamUi2,
   quizlamPreview,
+  warungpediass1,
+  warungpediass2,
+  warungpediass3,
+  warungpediass4,
   flyers1,
   flyers2,
 } from "../assets/images";
@@ -87,6 +91,24 @@ export const projectInfo = [
     code: "https://github.com/Hanip56/quizlam",
     type: "Android App",
     imageScreenshoot: [quizlamUi1, quizlamUi2],
+  },
+  {
+    name: "WarungPedia",
+    slug: "warungpedia",
+    stack: ["React", "Stripe", "Tailwind", "NodeJS", "express", "MongoDB"],
+    imagePreview: warungpediass1,
+    description: "E-commerce concept",
+    moreDescription:
+      "WarungPedia is a place where you can buy some yummiy food especially food from indonesia. Kupat tahu, Pecel Lele, Karedok and more.",
+    live: "https://warungpedia-client.vercel.app/",
+    code: "https://github.com/Hanip56/warungpedia-client",
+    type: "Full Stack App",
+    imageScreenshoot: [
+      warungpediass1,
+      warungpediass2,
+      warungpediass3,
+      warungpediass4,
+    ],
   },
   {
     name: "GBuilder",
